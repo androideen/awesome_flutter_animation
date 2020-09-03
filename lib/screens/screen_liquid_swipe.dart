@@ -1,3 +1,4 @@
+import 'package:awesome/constants/app.dart';
 import 'package:awesome/widgets/appbar.dart';
 import 'package:awesome/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class LiquidSwipePage extends StatefulWidget {
 class _LiquidSwipePageState extends State<LiquidSwipePage> {
   final pages = [
     Container(
-      color: Colors.pink,
+      color: Colors.blue,
       child: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,21 +22,28 @@ class _LiquidSwipePageState extends State<LiquidSwipePage> {
 
             Column(
               children: <Widget>[
-                new Text(
+                CircleAvatar(
+                  maxRadius: 124.0,
+                  backgroundImage: NetworkImage(
+                    AppConfig.IMAGE_DEMO,
+                  ),
+                ),
+                SizedBox(height: 24,),
+                Text(
                   "Hi",
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: "Billy",
                       fontWeight: FontWeight.w600),
                 ),
-                new Text(
+                Text(
                   "It's Me",
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: "Billy",
                       fontWeight: FontWeight.w600),
                 ),
-                new Text(
+                Text(
                   "Sahdeep",
                   style: TextStyle(
                       fontSize: 30,
@@ -58,21 +66,21 @@ class _LiquidSwipePageState extends State<LiquidSwipePage> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                new Text(
+                Text(
                   "Take a",
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: "Billy",
                       fontWeight: FontWeight.w600),
                 ),
-                new Text(
+                Text(
                   "look at",
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: "Billy",
                       fontWeight: FontWeight.w600),
                 ),
-                new Text(
+                Text(
                   "Liquid Swipe",
                   style: TextStyle(
                       fontSize: 30,
@@ -95,21 +103,21 @@ class _LiquidSwipePageState extends State<LiquidSwipePage> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                new Text(
+                Text(
                   "Liked?",
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: "Billy",
                       fontWeight: FontWeight.w600),
                 ),
-                new Text(
+                Text(
                   "Fork!",
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: "Billy",
                       fontWeight: FontWeight.w600),
                 ),
-                new Text(
+                Text(
                   "Give Star!",
                   style: TextStyle(
                       fontSize: 30,

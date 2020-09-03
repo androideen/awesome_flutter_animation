@@ -59,42 +59,32 @@ class _HomePageState extends State<HomePage> {
                 _pageAnimationButton(context, 'Size', 'size'),
                 _pageAnimationButton(context, 'Rotate', 'rotate'),
                 Header(text: '3rd-party Library'),
-                _libraryButton('animated_widgets', () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => AnimatedWidgetsPage()),
-                  );
-                }),
-                _libraryButton('liquid_swipe', () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => LiquidSwipePage()),
-                  );
-                }),
-                _libraryButton('simple_animations', () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => SimpleAnimationsPage()),
-                  );
-                }),
+                _libraryAnimationButton(context, 'animated_widgets', (context) => AnimatedWidgetsPage()),
+                _libraryAnimationButton(context, 'liquid_swipe', (context) => LiquidSwipePage()),
+                _libraryAnimationButton(context, 'simple_animations', (context) => SimpleAnimationsPage()),
+
               ],
             ),
           )),
     );
   }
+  
 
-  FlatButton _libraryButton(String library, VoidCallback onPressed) {
+  FlatButton _libraryAnimationButton(
+      BuildContext context, String library, WidgetBuilder builder) {
     return FlatButton(
         color: Colors.green,
         child: Text(library, style: TextStyle(color: Colors.white)),
-        onPressed: onPressed);
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: builder),
+          );
+        });
   }
 
-  FlatButton _pageAnimationButton(BuildContext context, String text,
-      String animationType) {
+  FlatButton _pageAnimationButton(
+      BuildContext context, String text, String animationType) {
     return FlatButton(
         color: Colors.blueGrey,
         child: Text(text, style: TextStyle(color: Colors.white)),
