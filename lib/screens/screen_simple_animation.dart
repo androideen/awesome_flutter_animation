@@ -17,7 +17,7 @@ class _SimpleAnimationsPageState extends State<SimpleAnimationsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(title: 'simple_animation'),
+      appBar: MainAppBar(title: 'simple_animations'),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
@@ -27,7 +27,6 @@ class _SimpleAnimationsPageState extends State<SimpleAnimationsPage> {
                 width: 320,
                 child: Column(
                   children: [
-                    Header(text: 'simple_animations: 2.2.1'),
 
                   ],
                 ),

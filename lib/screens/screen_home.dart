@@ -1,6 +1,7 @@
 import 'package:awesome/constants/app.dart';
 import 'package:awesome/screens/basic/screen_animation_page.dart';
 import 'package:awesome/screens/screen_animated_widgets.dart';
+import 'package:awesome/screens/screen_liquid_swipe.dart';
 
 import 'package:awesome/screens/screen_simple_animation.dart';
 import 'package:awesome/widgets/widgets.dart';
@@ -63,6 +64,13 @@ class _HomePageState extends State<HomePage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => AnimatedWidgetsPage()),
+                  );
+                }),
+                _libraryButton('liquid_swipe', () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => LiquidSwipePage()),
                   );
                 }),
                 _libraryButton('simple_animations', () {

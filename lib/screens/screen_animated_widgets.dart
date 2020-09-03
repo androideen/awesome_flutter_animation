@@ -34,7 +34,6 @@ class _AnimatedWidgetsPageState extends State<AnimatedWidgetsPage> {
                 width: 320,
                 child: Column(
                   children: [
-                    Header(text: 'animated_widgets: 1.0.6'),
                     TranslationAnimatedWidget(
                         enabled: _play,
                         values: [Offset(0, 0), Offset(-100, 0)],
