@@ -5,6 +5,7 @@ import 'package:awesome/screens/screen_liquid_swipe.dart';
 
 import 'package:awesome/screens/screen_simple_animation.dart';
 import 'package:awesome/widgets/widgets.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome/widgets/appbar.dart';
 
@@ -14,18 +15,34 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var _bottomNavIndex = 0;
+
+
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: MainAppBar(
         title: AppConfig.APP_NAME,
       ),
+      bottomNavigationBar: ConvexAppBar(
+        items: [
+          TabItem(icon: Icons.widgets, title: 'Widget'),
+          TabItem(icon: Icons.library_books, title: 'Page'),
+          TabItem(icon: Icons.extension, title: 'Library'),
+          TabItem(icon: Icons.work, title: 'Custom')
+        ],
+        onTap: (int i) => setState(() => _bottomNavIndex = i),
+        style: TabStyle.reactCircle,
+      ),
       body: SafeArea(
           minimum: EdgeInsets.all(16.0),
           child: SingleChildScrollView(
-            child: Wrap(
-              spacing: 3,
-              children: [
+              child: IndexedStack(
+            index: _bottomNavIndex,
+            children: [
+              _page([
                 Header(text: 'Animation Widget'),
                 ActionButton(type: 'AnimatedAlign'),
                 ActionButton(type: 'AnimatedContainer'),
@@ -50,6 +67,8 @@ class _HomePageState extends State<HomePage> {
                 ActionButton2(type: 'SlideTransition'),
                 ActionButton2(type: 'AnimatedBuilder'),
                 ActionButton2(type: 'AnimatedWidget'),
+              ]),
+              _page([
                 Header(text: 'Page Transition'),
                 _pageAnimationButton(context, 'Slide From Edge', 'slide'),
                 _pageAnimationButton(
@@ -58,17 +77,32 @@ class _HomePageState extends State<HomePage> {
                 _pageAnimationButton(context, 'Scale', 'scale'),
                 _pageAnimationButton(context, 'Size', 'size'),
                 _pageAnimationButton(context, 'Rotate', 'rotate'),
-                Header(text: '3rd-party Library'),
-                _libraryAnimationButton(context, 'animated_widgets', (context) => AnimatedWidgetsPage()),
-                _libraryAnimationButton(context, 'liquid_swipe', (context) => LiquidSwipePage()),
-                _libraryAnimationButton(context, 'simple_animations', (context) => SimpleAnimationsPage()),
-
-              ],
-            ),
-          )),
+              ]),
+              _page([
+                Header(text: '3rd-party Libraries'),
+                _libraryAnimationButton(context, 'animated_widgets',
+                    (context) => AnimatedWidgetsPage()),
+                _libraryAnimationButton(
+                    context, 'liquid_swipe', (context) => LiquidSwipePage()),
+                _libraryAnimationButton(context, 'simple_animations',
+                    (context) => SimpleAnimationsPage()),
+              ]),
+              _page([
+                Header(text: 'Custom Animations'),
+              ]),
+            ],
+          ))),
     );
   }
-  
+
+  Container _page(List<Widget> children) {
+    return Container(
+      child: Wrap(
+        spacing: 3,
+        children: children,
+      ),
+    );
+  }
 
   FlatButton _libraryAnimationButton(
       BuildContext context, String library, WidgetBuilder builder) {
