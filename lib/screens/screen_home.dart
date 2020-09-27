@@ -1,5 +1,6 @@
 import 'package:awesome/constants/app.dart';
 import 'package:awesome/screens/basic/screen_animation_page.dart';
+import 'package:awesome/screens/custom/screen_accordion.dart';
 import 'package:awesome/screens/screen_animated_widgets.dart';
 import 'package:awesome/screens/screen_liquid_swipe.dart';
 
@@ -89,6 +90,7 @@ class _HomePageState extends State<HomePage> {
               ]),
               _page([
                 Header(text: 'Custom Animations'),
+                _customAnimationButton(context, 'Accordion', (context) => AccordionPage())
               ]),
             ],
           ))),
@@ -102,6 +104,19 @@ class _HomePageState extends State<HomePage> {
         children: children,
       ),
     );
+  }
+
+  FlatButton _customAnimationButton(
+      BuildContext context, String animationName, WidgetBuilder builder) {
+    return FlatButton(
+        color: Colors.lightGreen,
+        child: Text(animationName, style: TextStyle(color: Colors.white)),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: builder),
+          );
+        });
   }
 
   FlatButton _libraryAnimationButton(
