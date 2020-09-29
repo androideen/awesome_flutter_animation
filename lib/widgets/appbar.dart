@@ -17,7 +17,7 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget{
     return AppBar(
       title: Text(title),
       actions: [
-          Icon(Icons.dehaze)
+          //Icon(Icons.dehaze)
       ],
     );
   }

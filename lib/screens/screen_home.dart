@@ -10,6 +10,8 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome/widgets/appbar.dart';
 
+import 'custom/screen_stacked_menu.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -90,7 +92,8 @@ class _HomePageState extends State<HomePage> {
               ]),
               _page([
                 Header(text: 'Custom Animations'),
-                _customAnimationButton(context, 'Accordion', (context) => AccordionPage())
+                _customAnimationButton(context, 'Accordion', (context) => AccordionPage()),
+                _customAnimationButton(context, 'Stacked Menu', (context) => StackedMenuPage())
               ]),
             ],
           ))),
