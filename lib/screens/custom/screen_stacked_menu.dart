@@ -33,37 +33,34 @@ class _StackedMenuPageState extends State<StackedMenuPage>
         double scale = 1 - (_controller.value * 0.5);
         return Stack(
           children: [
-            Scaffold(
-              body: Container(
-                width: double.infinity,
-                height: double.infinity,
-                color: Colors.green,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 50.0, left: 16.0, right: 16.0, bottom: 16.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Menu'),
-                            FlatButton(onPressed: (){}, child: Text('Menu 1')),
-                            FlatButton(onPressed: (){}, child: Text('Menu 2')),
-                            FlatButton(onPressed: (){}, child: Text('Menu 3')),
-                            FlatButton(onPressed: (){}, child: Text('Menu 4')),
-                            FlatButton(onPressed: () => stack(), child: Text('Close')),
-                          ],
-                        ),
-                        flex: 5,
+            Container(
+              width: double.infinity,
+              color: Colors.green,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 50.0, left: 16.0, right: 16.0, bottom: 16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Menu', style: TextStyle(fontSize: 24.0),),
+                          FlatButton(onPressed: (){}, child: Text('Menu 1')),
+                          FlatButton(onPressed: (){}, child: Text('Menu 2')),
+                          FlatButton(onPressed: (){}, child: Text('Menu 3')),
+                          FlatButton(onPressed: (){}, child: Text('Menu 4')),
+                          FlatButton(onPressed: () => stack(), child: Text('Close')),
+                        ],
                       ),
-                      Expanded(
-                        child: Container(),
-                        flex: 5,
-                      )
-                    ],
-                  ),
+                      flex: 5,
+                    ),
+                    Expanded(
+                      child: Container(),
+                      flex: 5,
+                    )
+                  ],
                 ),
               ),
             ),
