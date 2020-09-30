@@ -9,3 +9,5 @@ This repository showcases Flutter's built-in animation widgets and other 3rd-par
 - Page transition
 - Popular 3rd-party animation libraries
 - Some custom work
+
+Flutter resources: https://tltemplates.com/flutter/
