@@ -3,7 +3,7 @@
 
 This repository showcases Flutter's built-in animation widgets and other 3rd-parties' libraries.
 
-![]https://github.com/androideen/awesome_flutter_animation/blob/master/demo/demo.gif)
+![](https://github.com/androideen/awesome_flutter_animation/blob/master/demo/demo.gif)
 
 **Including:**
 
