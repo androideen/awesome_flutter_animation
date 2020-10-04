@@ -131,6 +131,18 @@ class _CityMorningPageState extends State<CityMorningPage>
                 ),
               ),
               Positioned(
+                top: _sunPosition.value,
+                left: MediaQuery.of(context).size.width / 2 - _sunSize.value / 2,
+                child: Opacity(
+                  opacity: _sunOpacity.value,
+                  child: Icon(
+                    Icons.wb_sunny,
+                    size: _sunSize.value,
+                    color: Colors.orangeAccent,
+                  ),
+                ),
+              ),
+              Positioned(
                   top: 140,
                   left: MediaQuery.of(context).size.width / 2 - 50,
                   child: Opacity(
@@ -258,18 +270,7 @@ class _CityMorningPageState extends State<CityMorningPage>
                   ),
                 ),
               ),
-              Positioned(
-                top: _sunPosition.value,
-                left: MediaQuery.of(context).size.width / 2 - _sunSize.value / 2,
-                child: Opacity(
-                  opacity: _sunOpacity.value,
-                  child: Icon(
-                    Icons.wb_sunny,
-                    size: _sunSize.value,
-                    color: Colors.orangeAccent,
-                  ),
-                ),
-              ),
+
             ],
           );
         },
