@@ -10,18 +10,18 @@ class AnimatedWidgetsPage extends StatefulWidget {
 
 class _AnimatedWidgetsPageState extends State<AnimatedWidgetsPage> {
   bool _play = false;
-  String fbtnText = '>>';
+  IconData _fbIcon = Icons.navigate_next;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(title: 'animated_widgets'),
       floatingActionButton: FloatingActionButton(
-        child: Text(fbtnText),
+        child: Icon(_fbIcon),
         onPressed: () {
           setState(() {
             _play = !_play;
-            fbtnText = !_play ? '>>' : '<<';
+            _fbIcon = !_play ? Icons.navigate_next : Icons.navigate_before;
           });
         },
       ),
