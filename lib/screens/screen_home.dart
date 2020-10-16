@@ -2,6 +2,7 @@ import 'package:awesome/constants/app.dart';
 import 'package:awesome/screens/basic/screen_animation_page.dart';
 import 'package:awesome/screens/custom/screen_accordion.dart';
 import 'package:awesome/screens/custom/screen_rising_sun.dart';
+import 'package:awesome/screens/custom/screen_wave.dart';
 import 'package:awesome/screens/screen_animated_widgets.dart';
 import 'package:awesome/screens/screen_liquid_swipe.dart';
 
@@ -21,21 +22,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var _bottomNavIndex = 0;
 
-
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: MainAppBar(
         title: AppConfig.APP_NAME,
       ),
       bottomNavigationBar: ConvexAppBar(
         items: [
+          TabItem(icon: Icons.work, title: 'Custom'),
+          TabItem(icon: Icons.extension, title: 'Library'),
           TabItem(icon: Icons.widgets, title: 'Widget'),
           TabItem(icon: Icons.library_books, title: 'Page'),
-          TabItem(icon: Icons.extension, title: 'Library'),
-          TabItem(icon: Icons.work, title: 'Custom')
         ],
         onTap: (int i) => setState(() => _bottomNavIndex = i),
         style: TabStyle.reactCircle,
@@ -46,6 +44,26 @@ class _HomePageState extends State<HomePage> {
               child: IndexedStack(
             index: _bottomNavIndex,
             children: [
+              _page([
+                Header(text: 'Custom Animations'),
+                _customAnimationButton(
+                    context, 'Accordion', (context) => AccordionPage()),
+                _customAnimationButton(
+                    context, 'Stacked Menu', (context) => StackedMenuPage()),
+                _customAnimationButton(context, 'Morning in the City',
+                        (context) => CityMorningPage()),
+                _customAnimationButton(
+                    context, 'Wave', (context) => WavePage()),
+              ]),
+              _page([
+                Header(text: '3rd-party Libraries'),
+                _libraryAnimationButton(context, 'animated_widgets',
+                        (context) => AnimatedWidgetsPage()),
+                _libraryAnimationButton(
+                    context, 'liquid_swipe', (context) => LiquidSwipePage()),
+                _libraryAnimationButton(context, 'simple_animations',
+                        (context) => SimpleAnimationsPage()),
+              ]),
               _page([
                 Header(text: 'Animation Widget'),
                 ActionButton(type: 'AnimatedAlign'),
@@ -82,21 +100,7 @@ class _HomePageState extends State<HomePage> {
                 _pageAnimationButton(context, 'Size', 'size'),
                 _pageAnimationButton(context, 'Rotate', 'rotate'),
               ]),
-              _page([
-                Header(text: '3rd-party Libraries'),
-                _libraryAnimationButton(context, 'animated_widgets',
-                    (context) => AnimatedWidgetsPage()),
-                _libraryAnimationButton(
-                    context, 'liquid_swipe', (context) => LiquidSwipePage()),
-                _libraryAnimationButton(context, 'simple_animations',
-                    (context) => SimpleAnimationsPage()),
-              ]),
-              _page([
-                Header(text: 'Custom Animations'),
-                _customAnimationButton(context, 'Accordion', (context) => AccordionPage()),
-                _customAnimationButton(context, 'Stacked Menu', (context) => StackedMenuPage()),
-                _customAnimationButton(context, 'Morning in the City', (context) => CityMorningPage())
-              ]),
+
             ],
           ))),
     );
