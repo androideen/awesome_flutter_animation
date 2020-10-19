@@ -5,6 +5,8 @@ This repository showcases Flutter's built-in animation widgets and other 3rd-par
 
 ![](https://github.com/androideen/awesome_flutter_animation/blob/master/demo/demo.gif)
 
+Full demo: [![Flutter Animations](https://img.youtube.com/vi/TQpV-f_3C1E/maxres3.jpg)](https://www.youtube.com/watch?v=TQpV-f_3C1E)
+
 **Including:**
 
 - Built-in Animation Widgets
