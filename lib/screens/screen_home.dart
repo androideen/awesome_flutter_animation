@@ -6,6 +6,7 @@ import 'package:awesome/screens/custom/screen_rising_sun.dart';
 import 'package:awesome/screens/custom/screen_wave.dart';
 import 'package:awesome/screens/screen_animated_widgets.dart';
 import 'package:awesome/screens/screen_liquid_swipe.dart';
+import 'package:awesome/screens/screen_path_morph.dart';
 
 import 'package:awesome/screens/screen_simple_animation.dart';
 import 'package:awesome/widgets/widgets.dart';
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 _customAnimationButton(
                     context, 'Wave', (context) => WavePage()),
                 _customAnimationButton(
-                    context, 'Flip', (context) => FlipCardPage()),
+                    context, 'Flip Card', (context) => FlipCardPage()),
               ]),
               _page([
                 Header(text: '3rd-party Libraries'),
@@ -66,6 +67,8 @@ class _HomePageState extends State<HomePage> {
                     context, 'liquid_swipe', (context) => LiquidSwipePage()),
                 _libraryAnimationButton(context, 'simple_animations',
                         (context) => SimpleAnimationsPage()),
+                _libraryAnimationButton(context, 'path_morph',
+                        (context) => PathMorphPage()),
               ]),
               _page([
                 Header(text: 'Animation Widget'),
