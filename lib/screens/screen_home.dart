@@ -1,6 +1,7 @@
 import 'package:awesome/constants/app.dart';
 import 'package:awesome/screens/basic/screen_animation_page.dart';
 import 'package:awesome/screens/custom/screen_accordion.dart';
+import 'package:awesome/screens/custom/screen_flipcard.dart';
 import 'package:awesome/screens/custom/screen_rising_sun.dart';
 import 'package:awesome/screens/custom/screen_wave.dart';
 import 'package:awesome/screens/screen_animated_widgets.dart';
@@ -54,6 +55,8 @@ class _HomePageState extends State<HomePage> {
                         (context) => CityMorningPage()),
                 _customAnimationButton(
                     context, 'Wave', (context) => WavePage()),
+                _customAnimationButton(
+                    context, 'Flip', (context) => FlipCardPage()),
               ]),
               _page([
                 Header(text: '3rd-party Libraries'),

@@ -1,6 +1,6 @@
 import 'package:awesome/constants/app.dart';
-import 'file:///J:/AndroidStudioProjects/awesome/lib/screens/basic/screen_animation_simple.dart';
-import 'file:///J:/AndroidStudioProjects/awesome/lib/screens/basic/screen_animation_tickerprovider.dart';
+import 'package:awesome/screens/basic/screen_animation_simple.dart';
+import 'package:awesome/screens/basic/screen_animation_tickerprovider.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
