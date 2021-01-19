@@ -29,6 +29,7 @@ dependencies:
   url_launcher: ^5.7.2
   convex_bottom_bar: ^2.4.1
   path_morph: ^1.0.1
+  drawing_animation: ^0.1.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -49,11 +50,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/potion.svg
+    # To add assets to your application, add an assets section, like this:
 
-  # To add assets to your application, add an assets section, like this:
-#   assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

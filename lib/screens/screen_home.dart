@@ -5,6 +5,7 @@ import 'package:awesome/screens/custom/screen_flipcard.dart';
 import 'package:awesome/screens/custom/screen_rising_sun.dart';
 import 'package:awesome/screens/custom/screen_wave.dart';
 import 'package:awesome/screens/screen_animated_widgets.dart';
+import 'package:awesome/screens/screen_drawing_animation.dart';
 import 'package:awesome/screens/screen_liquid_swipe.dart';
 import 'package:awesome/screens/screen_path_morph.dart';
 
@@ -69,6 +70,8 @@ class _HomePageState extends State<HomePage> {
                         (context) => SimpleAnimationsPage()),
                 _libraryAnimationButton(context, 'path_morph',
                         (context) => PathMorphPage()),
+                _libraryAnimationButton(context, 'drawing_animation',
+                        (context) => DrawingAnimationPage()),
               ]),
               _page([
                 Header(text: 'Animation Widget'),
