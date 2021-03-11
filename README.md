@@ -14,6 +14,6 @@ Full demo: [![Flutter Animations](https://img.youtube.com/vi/TQpV-f_3C1E/maxres3
 - Popular 3rd-party animation libraries
 - Some custom work
 
-[Demo Android apk](https://github.com/androideen/awesome_flutter_animation/blob/master/demo/app.apk)
+[Demo Android apk](https://play.google.com/store/apps/details?id=com.tltemplates.flutter_templates)
 
 Flutter resources: https://tltemplates.com/learn-flutter/
