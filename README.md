@@ -16,4 +16,4 @@ Full demo: [![Flutter Animations](https://img.youtube.com/vi/TQpV-f_3C1E/maxres3
 
 [Demo Android apk](https://play.google.com/store/apps/details?id=com.tltemplates.flutter_templates)
 
-Flutter resources: https://tltemplates.com/learn-flutter/
+Flutter resources: https://www.tldevtech.com/learn-flutter/
